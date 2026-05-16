@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Tailwind v4 ไม่อ่าน tailwind.config.ts อัตโนมัติ — ต้องสั่งโหลดเอง
+   บรรทัดนี้แหละที่ทำให้สี primary/accent ทั้งเว็บกลับมาทำงาน */
+@config "../../tailwind.config.ts";
+
 /* ─────────────────────────────────────────────────────────────────────────────
    CSS CUSTOM PROPERTIES (Variables)
    คิดว่านี่คือ "แหล่งความจริงเดียว" สำหรับสีทั้งหมด

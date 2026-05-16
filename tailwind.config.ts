@@ -36,6 +36,10 @@ const config: Config = {
           dark:    "#A07830",
           subtle:  "#FDF5E8",
         },
+        // alias แบบ flat — ทำให้ class ที่ใช้ทั่วโค้ด เช่น
+        // bg-primary-DEFAULT / text-accent-DEFAULT ใช้งานได้
+        "primary-DEFAULT": "#1B2B5E",
+        "accent-DEFAULT":  "#C8973F",
         // Surfaces
         surface: {
           DEFAULT: "#F8F7F4",
