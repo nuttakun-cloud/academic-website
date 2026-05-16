@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CSS CUSTOM PROPERTIES (Variables)
+   คิดว่านี่คือ "แหล่งความจริงเดียว" สำหรับสีทั้งหมด
+   เปลี่ยนที่นี่ที่เดียว → อัปเดตทั้งเว็บ
+   ───────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Surfaces ── */
+  --bg-page:     #F8F7F4;
+  --bg-alt:      #EEECEA;
+  --bg-elevated: #FFFFFF;
+
+  /* ── Text ── */
+  --text-primary:   #18181B;
+  --text-secondary: #52525B;
+  --text-muted:     #A1A1AA;
+  --text-inverse:   #FAFAFA;
+
+  /* ── Borders ── */
+  --border:        #DDD9D4;
+  --border-subtle: #EEECEA;
+
+  /* ── Brand ── */
+  --primary:        #1B2B5E;
+  --primary-light:  #2D4E8C;
+  --primary-dark:   #0F1A3D;
+  --primary-subtle: #EEF1F8;
+
+  --accent:         #C8973F;
+  --accent-light:   #E4B96A;
+  --accent-dark:    #A07830;
+  --accent-subtle:  #FDF5E8;
+}
+
+/* Dark mode — next-themes เพิ่ม class="dark" บน <html> อัตโนมัติ */
+.dark {
+  --bg-page:     #0F1117;
+  --bg-alt:      #1A1D27;
+  --bg-elevated: #212533;
+
+  --text-primary:   #F4F4F5;
+  --text-secondary: #A1A1AA;
+  --text-muted:     #71717A;
+
+  --border:        #2E3244;
+  --border-subtle: #252838;
+
+  --primary-subtle: #1A2244;
+  --accent-subtle:  #2A2010;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BASE STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   TYPOGRAPHY
+   ───────────────────────────────────────────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+p {
+  line-height: 1.75;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--primary);
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+}
+
+a:hover {
+  color: var(--primary-light);
+  text-decoration-color: currentColor;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   ACADEMIC ELEMENTS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.abstract-block {
+  font-size: 1rem;
+  line-height: 1.75;
+  background-color: var(--bg-alt);
+  border-left: 3px solid var(--accent);
+  padding: 1.5rem 2rem;
+  border-radius: 0 8px 8px 0;
+  margin: 2rem 0;
+}
+
+.abstract-block::before {
+  display: block;
+  content: "Abstract";
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.citation-block {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text-secondary);
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FOCUS — accessibility
+   ───────────────────────────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   REDUCED MOTION — accessibility
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SCROLLBAR
+   ───────────────────────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-alt); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SELECTION
+   ───────────────────────────────────────────────────────────────────────────── */
+
+::selection {
+  background-color: var(--primary-subtle);
+  color: var(--primary-dark);
+}
