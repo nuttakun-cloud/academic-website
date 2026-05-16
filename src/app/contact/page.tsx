@@ -6,18 +6,17 @@ import PageHeader from "@/components/ui/PageHeader";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import { profile } from "@/content/profile";
+import { siteConfig } from "@/config/site";
 
 // =============================================================================
 // CONTACT PAGE  (/contact)
 //
-// ── Netlify Forms ──
-// ฟอร์มนี้ใช้งานได้จริง "ตอน deploy บน Netlify เท่านั้น"
-// Netlify จะสแกน HTML ตอน build แล้วเปิดระบบรับฟอร์มให้อัตโนมัติ
-// สิ่งจำเป็น 3 อย่าง (มีครบในฟอร์มด้านล่าง):
-//   1. data-netlify="true"            → บอก Netlify ว่านี่คือฟอร์ม
-//   2. <input hidden name="form-name"> → ระบุชื่อฟอร์มตอนส่ง
-//   3. netlify-honeypot="bot-field"    → กันสแปมบอท
-// เป็น server component (static) → Netlify ตรวจเจอ + ทำงานแม้ปิด JS
+// ── Formspree (ทำงานบน Vercel) ──
+// ฟอร์มส่งไปที่ siteConfig.contactFormEndpoint (Formspree)
+// ต้องตั้ง endpoint จริงใน src/config/site.ts ก่อนใช้งาน
+//   _gotcha = honeypot กันสแปม (Formspree รองรับในตัว)
+//   _subject = หัวข้ออีเมลที่จะได้รับ
+// เป็น server component (static) → ทำงานแม้ปิด JS
 // =============================================================================
 
 export const metadata: Metadata = {
@@ -138,21 +137,21 @@ export default function ContactPage() {
               {/* Right: Netlify form */}
               <div className="lg:col-span-2">
                 <form
-                  name="contact"
                   method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
-                  action="/contact?success=1"
+                  action={siteConfig.contactFormEndpoint}
                   className="space-y-5"
                 >
-                  {/* จำเป็นสำหรับ Netlify — ระบุชื่อฟอร์ม */}
-                  <input type="hidden" name="form-name" value="contact" />
+                  {/* หัวข้ออีเมลที่เจ้าของเว็บจะได้รับจาก Formspree */}
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New message from academic website"
+                  />
 
-                  {/* honeypot — ซ่อนจากคน บอทจะกรอก → ถูกตัดทิ้ง */}
-                  <p className="hidden">
+                  {/* honeypot ของ Formspree — ซ่อนจากคน บอทกรอก → ถูกตัดทิ้ง */}
+                  <p className="hidden" aria-hidden="true">
                     <label>
-                      Do not fill this out:{" "}
-                      <input name="bot-field" />
+                      Do not fill this out: <input name="_gotcha" tabIndex={-1} />
                     </label>
                   </p>
 
@@ -244,7 +243,7 @@ export default function ContactPage() {
                   </button>
 
                   <p className="text-xs text-[var(--text-muted)]">
-                    Your message is sent securely via Netlify. Fields marked
+                    Your message is sent securely via Formspree. Fields marked
                     <span aria-hidden="true"> *</span> are required.
                   </p>
                 </form>

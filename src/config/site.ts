@@ -27,7 +27,11 @@ export const siteConfig = {
   ogImage: "/images/og-image.png",
 
   // ── Footer ──
-  builtWith: "Built with Next.js · Hosted on Netlify",
+  builtWith: "Built with Next.js · Hosted on Vercel",
+
+  // ── Contact form (Formspree) ──
+  // Formspree endpoint จริง (รับข้อความจากฟอร์ม Contact)
+  contactFormEndpoint: "https://formspree.io/f/mbdbrgkj",
 
   // ── Navigation (เดิมอยู่ใน Navbar; footer มี subset แยก) ──
   nav: [
