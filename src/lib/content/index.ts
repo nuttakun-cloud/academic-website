@@ -19,18 +19,18 @@ import type { ContentProvider } from "./provider";
 import { localProvider } from "./local-provider";
 import { markdownProvider } from "./markdown-provider";
 
-// อ่านจาก environment variable (ถ้าไม่ตั้ง = local)
-const source = process.env.CONTENT_SOURCE ?? "local";
+// อ่านจาก environment variable (ถ้าไม่ตั้ง = markdown — เนื้อหาจริงอยู่ใน content-md/)
+const source = process.env.CONTENT_SOURCE ?? "markdown";
 
 function selectProvider(): ContentProvider {
   switch (source) {
-    case "markdown":
-      return markdownProvider;
+    case "local":
+      return localProvider;
     // case "cms":
     //   return cmsProvider;
-    case "local":
+    case "markdown":
     default:
-      return localProvider;
+      return markdownProvider;
   }
 }
 

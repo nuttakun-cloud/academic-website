@@ -127,7 +127,7 @@ function toPost(slug: string, d: Record<string, unknown>, body: string): BlogPos
     category: (d.category as BlogPost["category"]) ?? "news",
     tags: toTaxonomy(d.tags as string[]),
     featured: Boolean(d.featured),
-    author: { id: "author-self", slug: "jane-smith", label: "Smith J" },
+    author: { id: "author-self", slug: "nuttakun-khanyom", label: "ณัฐกันต์ ขันยม" },
     readingTimeMinutes: d.readingTimeMinutes as number | undefined,
     createdAt: published,
     updatedAt: published,

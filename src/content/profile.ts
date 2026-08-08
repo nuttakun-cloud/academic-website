@@ -6,102 +6,75 @@ import type { Profile } from "@/types";
 // =============================================================================
 
 export const profile: Profile = {
-  name:        "Professor Jane Smith",
-  title:       "Professor of Computational Biology",
-  institution: "University of Edinburgh",
-  department:  "School of Biological Sciences",
-  email:       "j.smith@university.ac.uk",
-  officeHours: "Tuesday 14:00–16:00 · Thursday 10:00–12:00",
-  officeLocation: "Ashworth Laboratories, Room 4.02",
+  name:        "ณัฐกันต์ ขันยม (Nuttakun Khanyom)",
+  title:       "อาจารย์ (Instructor/Lecturer)",
+  institution: "มหาวิทยาลัยราชภัฏรำไพพรรณี",
+  // TODO: ยืนยันชื่อสาขาวิชา/คณะที่สังกัด
+  department:  "สาขาวิชาชีววิทยา",
+  email:       "nuttakun.k@rbru.ac.th",
+  officeHours: "โทร. 039-319111 ต่อ 10720 หรือ 10721 · หรือนัดหมายทางอีเมล",
+  officeLocation: "อาคาร 9 ห้อง 9408",
   photo:       "/images/profile.jpg",
   cv:          "/files/cv.pdf",
 
   bio: [
-    "I am a Professor of Computational Biology at the University of Edinburgh, " +
-    "where I lead the Genomic Data Science Laboratory. My research sits at the " +
-    "intersection of machine learning and genomics, with a particular focus on " +
-    "developing computational tools for early disease detection.",
+    "อาจารย์ประจำสาขาวิชาชีววิทยา มหาวิทยาลัยราชภัฏรำไพพรรณี " +
+    "รับผิดชอบรายวิชาด้านชีววิทยาและการผลิตครูวิทยาศาสตร์ " +
+    "อาทิ การสร้างสื่อการเรียนการสอนทางชีววิทยา เทคนิคทางชีววิทยา " +
+    "และการจัดกิจกรรมทางวิทยาศาสตร์",
 
-    "Before joining Edinburgh, I was a Postdoctoral Fellow at the Broad Institute " +
-    "of MIT and Harvard. I completed my PhD in Bioinformatics at MIT in 2010 " +
-    "under the supervision of Professor John Doe.",
+    "สำเร็จการศึกษาวิทยาศาสตรบัณฑิต (ชีววิทยา) จากคณะวิทยาศาสตร์ " +
+    "มหาวิทยาลัยเกษตรศาสตร์ และครุศาสตรมหาบัณฑิต (การศึกษาวิทยาศาสตร์) " +
+    "จากคณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย",
 
-    "I am currently accepting PhD students and postdoctoral researchers. " +
-    "Please see the Contact page for details on how to apply.",
+    "งานวิจัยมุ่งเน้นด้านความหลากหลายทางชีวภาพ โดยเฉพาะแมลงน้ำในลำธารต้นน้ำ " +
+    "ควบคู่กับการพัฒนาสื่อการเรียนการสอนและนวัตกรรมการศึกษาทางวิทยาศาสตร์",
   ],
 
   researchInterests: [
-    "Genomic Data Analysis",
-    "Machine Learning in Diagnostics",
-    "Population Genetics",
-    "Computational Pathology",
-    "Cancer Genomics",
-    "Biomarker Discovery",
+    "ความหลากหลายทางชีวภาพ (Biodiversity)",
+    "สื่อการเรียนการสอน (Teaching Materials)",
+    "นวัตกรรมการศึกษา (Educational Innovation)",
+    "วิทยาศาสตร์ศึกษา (Science Education)",
   ],
 
   education: [
     {
-      degree:      "PhD Bioinformatics",
-      institution: "Massachusetts Institute of Technology",
-      year:        "2010",
-      thesis:      "Computational methods for large-scale genomic variant analysis",
+      degree:      "ค.ม. (การศึกษาวิทยาศาสตร์)",
+      institution: "คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย",
+      year:        "", // TODO: ระบุปีที่สำเร็จการศึกษา
     },
     {
-      degree:      "MSc Computational Science",
-      institution: "University of Oxford",
-      year:        "2006",
-    },
-    {
-      degree:      "BSc Biology",
-      institution: "University of Edinburgh",
-      year:        "2004",
+      degree:      "วท.บ. (ชีววิทยา)",
+      institution: "คณะวิทยาศาสตร์ มหาวิทยาลัยเกษตรศาสตร์",
+      year:        "", // TODO: ระบุปีที่สำเร็จการศึกษา
     },
   ],
 
   positions: [
     {
-      title:       "Professor of Computational Biology",
-      institution: "University of Edinburgh",
-      period:      "2018–present",
-    },
-    {
-      title:       "Associate Professor",
-      institution: "University of Leeds",
-      period:      "2014–2018",
-    },
-    {
-      title:       "Postdoctoral Research Fellow",
-      institution: "Broad Institute, MIT & Harvard",
-      period:      "2010–2014",
+      title:       "อาจารย์ (Instructor/Lecturer)",
+      institution: "มหาวิทยาลัยราชภัฏรำไพพรรณี",
+      period:      "ปัจจุบัน", // TODO: ระบุปีที่เริ่มงาน เช่น "2565–ปัจจุบัน"
     },
   ],
 
-  awards: [
-    { year: "2024", title: "Fellow of the Royal Society" },
-    { year: "2022", title: "ERC Consolidator Grant" },
-    { year: "2019", title: "ISCB Outstanding Contribution Award" },
-    { year: "2017", title: "Wellcome Trust Senior Research Fellowship" },
-  ],
+  awards: [],
 
   social: [
     {
       platform: "google-scholar",
-      url:      "https://scholar.google.com/citations?user=YOURID",
+      url:      "https://scholar.google.co.th/citations?user=gkTnpekAAAAJ",
       label:    "Google Scholar",
     },
     {
-      platform: "orcid",
-      url:      "https://orcid.org/0000-0000-0000-0000",
-      label:    "ORCID",
-    },
-    {
-      platform: "github",
-      url:      "https://github.com/janesmith",
-      label:    "GitHub",
+      platform: "researchgate", // ใช้ slot นี้แสดงลิงก์ Scopus
+      url:      "https://www.scopus.com/authid/detail.uri?authorId=57223851298",
+      label:    "Scopus",
     },
     {
       platform: "email",
-      url:      "mailto:j.smith@university.ac.uk",
+      url:      "mailto:nuttakun.k@rbru.ac.th",
       label:    "Email",
     },
   ],

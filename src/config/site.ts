@@ -13,17 +13,17 @@ export const siteConfig = {
   // ── Identity (ดึงจาก profile — ไม่ hardcode ซ้ำ) ──
   name: profile.name,
   /** ชื่อย่อสำหรับ Navbar/Footer brand */
-  shortName: "Prof. Jane Smith",
+  shortName: "อ.ณัฐกันต์ ขันยม",
   title: `${profile.name} · ${profile.title}`,
   description:
-    `${profile.title} at ${profile.institution}. ` +
-    `Research in ${profile.researchInterests.slice(0, 3).join(", ").toLowerCase()}.`,
+    `${profile.title} ${profile.institution} ` +
+    `งานวิจัยด้าน ${profile.researchInterests.slice(0, 3).join(", ")}`,
 
   // ── Deployment ──
   /** URL จริงตอน deploy — เปลี่ยนที่นี่ที่เดียว (เดิม hardcode 3 ที่) */
-  url: "https://profsmith.university.ac.uk",
-  locale: "en_GB",
-  twitter: "@profsmith",
+  url: "https://nuttakun-k.rbru.ac.th",
+  locale: "th_TH",
+  twitter: "",
   ogImage: "/images/og-image.png",
 
   // ── Footer ──
