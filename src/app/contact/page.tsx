@@ -29,18 +29,17 @@ export const metadata: Metadata = {
 
 // แนวทางก่อนติดต่อ — ช่วยคัดกรองอีเมล
 const routing = [
-  { for: "PhD enquiries", note: "Include your CV and a brief research statement." },
-  { for: "Collaboration", note: "Outline the proposed work and timeline." },
-  { for: "Media / press", note: "Please contact the university press office." },
-  { for: "Current students", note: "Use the course forum for module questions." },
+  { for: "นักศึกษาปัจจุบัน", note: "สอบถามเรื่องรายวิชา การนัดหมาย หรือคำปรึกษาการเรียน" },
+  { for: "ความร่วมมือทางวิจัย", note: "แจ้งหัวข้อ ขอบเขตงาน และช่วงเวลาที่ต้องการ" },
+  { for: "สื่อการสอน/วิชาการ", note: "สอบถามหรือขอใช้สื่อการเรียนการสอน" },
+  { for: "เรื่องอื่น ๆ", note: "ติดต่อทางอีเมลหรือโทรศัพท์ในเวลาราชการ" },
 ];
 
 const subjects = [
-  "PhD enquiry",
-  "Research collaboration",
-  "Media / press",
-  "Student question",
-  "Other",
+  "สอบถามเรื่องรายวิชา",
+  "ความร่วมมือทางวิจัย",
+  "สื่อการสอน/วิชาการ",
+  "อื่น ๆ",
 ];
 
 export default function ContactPage() {
@@ -52,7 +51,7 @@ export default function ContactPage() {
         <PageHeader
           eyebrow="Contact"
           title="Get in Touch"
-          description="I welcome enquiries from prospective students, researchers, and potential collaborators."
+          description="ยินดีรับการติดต่อจากนักศึกษา นักวิจัย และผู้สนใจความร่วมมือทางวิชาการ"
         />
 
         {/* ── Routing guidance ── */}

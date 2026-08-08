@@ -118,18 +118,20 @@ export default function AboutPage() {
                   </li>
                 </ul>
 
-                <a
-                  href={profile.cv}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-md
-                    bg-primary-DEFAULT text-white text-sm font-medium font-sans
-                    hover:bg-primary-light transition-colors no-underline
-                    focus-visible:outline-2 focus-visible:outline-accent-DEFAULT focus-visible:outline-offset-2"
-                >
-                  <FileText size={15} aria-hidden="true" />
-                  Download CV (PDF)
-                </a>
+                {profile.cv && (
+                  <a
+                    href={profile.cv}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-md
+                      bg-primary-DEFAULT text-white text-sm font-medium font-sans
+                      hover:bg-primary-light transition-colors no-underline
+                      focus-visible:outline-2 focus-visible:outline-accent-DEFAULT focus-visible:outline-offset-2"
+                  >
+                    <FileText size={15} aria-hidden="true" />
+                    Download CV (PDF)
+                  </a>
+                )}
               </div>
 
               {/* Right: bio */}
@@ -255,56 +257,60 @@ export default function AboutPage() {
           </Container>
         </section>
 
-        {/* ── Awards ── */}
-        <section
-          aria-labelledby="awards-heading"
-          className="bg-[var(--bg-page)] py-20"
-        >
-          <Container>
-            <SectionHeading eyebrow="Honours" title="Awards & Distinctions" as="h2" />
-            <ul className="space-y-4">
-              {profile.awards.map((a) => (
-                <li
-                  key={`${a.title}-${a.year}`}
-                  className="flex items-baseline gap-4"
-                >
-                  <span className="text-sm font-bold text-accent-dark w-12 shrink-0">
-                    {a.year}
-                  </span>
-                  <span className="text-[var(--text-primary)]">{a.title}</span>
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </section>
+        {/* ── Awards (ซ่อนเมื่อยังไม่มีข้อมูล) ── */}
+        {profile.awards.length > 0 && (
+          <section
+            aria-labelledby="awards-heading"
+            className="bg-[var(--bg-page)] py-20"
+          >
+            <Container>
+              <SectionHeading eyebrow="Honours" title="Awards & Distinctions" as="h2" />
+              <ul className="space-y-4">
+                {profile.awards.map((a) => (
+                  <li
+                    key={`${a.title}-${a.year}`}
+                    className="flex items-baseline gap-4"
+                  >
+                    <span className="text-sm font-bold text-accent-dark w-12 shrink-0">
+                      {a.year}
+                    </span>
+                    <span className="text-[var(--text-primary)]">{a.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </Container>
+          </section>
+        )}
 
-        {/* ── CV strip ── */}
-        <section className="bg-primary-DEFAULT text-white py-16">
-          <Container>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <div>
-                <h2 className="font-serif text-2xl font-bold text-white mb-1">
-                  Full academic CV
-                </h2>
-                <p className="text-white/70 text-sm">
-                  Complete record of publications, grants, and service.
-                </p>
+        {/* ── CV strip (ซ่อนจนกว่าจะอัปโหลดไฟล์ CV) ── */}
+        {profile.cv && (
+          <section className="bg-primary-DEFAULT text-white py-16">
+            <Container>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <h2 className="font-serif text-2xl font-bold text-white mb-1">
+                    Full academic CV
+                  </h2>
+                  <p className="text-white/70 text-sm">
+                    ประวัติและผลงานฉบับเต็ม
+                  </p>
+                </div>
+                <a
+                  href={profile.cv}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md shrink-0
+                    bg-accent-DEFAULT text-white text-sm font-medium font-sans
+                    hover:bg-accent-light transition-colors no-underline
+                    focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+                >
+                  <FileText size={16} aria-hidden="true" />
+                  Download CV (PDF)
+                </a>
               </div>
-              <a
-                href={profile.cv}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md shrink-0
-                  bg-accent-DEFAULT text-white text-sm font-medium font-sans
-                  hover:bg-accent-light transition-colors no-underline
-                  focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
-              >
-                <FileText size={16} aria-hidden="true" />
-                Download CV (PDF)
-              </a>
-            </div>
-          </Container>
-        </section>
+            </Container>
+          </section>
+        )}
       </main>
 
       <Footer />

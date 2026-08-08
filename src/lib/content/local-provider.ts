@@ -132,14 +132,13 @@ const now = "2025-01-01T00:00:00Z";
 const authors: Author[] = [
   {
     id: "author-self",
-    slug: "jane-smith",
+    slug: "nuttakun-khanyom",
     type: "author",
     status: "published",
-    locale: "en",
-    name: "Jane Smith",
+    locale: "th",
+    name: "ณัฐกันต์ ขันยม",
     isSelf: true,
-    affiliation: "University of Edinburgh",
-    orcid: "0000-0000-0000-0000",
+    affiliation: "มหาวิทยาลัยราชภัฏรำไพพรรณี",
     createdAt: now,
     updatedAt: now,
   },
@@ -147,8 +146,8 @@ const authors: Author[] = [
 
 const selfRef = {
   id: "author-self",
-  slug: "jane-smith",
-  label: "Smith J",
+  slug: "nuttakun-khanyom",
+  label: "ณัฐกันต์ ขันยม",
 };
 
 // แท็กที่ใช้ซ้ำ — ประกาศครั้งเดียว (ไม่ทำซ้ำ object เดียวกัน)

@@ -37,7 +37,7 @@ export default async function BlogPage() {
         <PageHeader
           eyebrow="News & Writing"
           title="Updates from the Lab"
-          description="Announcements about new papers, conference talks, and information for current and prospective students."
+          description="ข่าวสาร บทความ และประกาศสำหรับนักศึกษา"
         />
 
         <section

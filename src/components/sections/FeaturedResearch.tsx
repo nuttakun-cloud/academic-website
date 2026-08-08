@@ -26,7 +26,7 @@ export default async function FeaturedResearch() {
         <SectionHeading
           eyebrow="Research"
           title="Featured Projects"
-          description="Current research programmes exploring computational approaches to genomics and diagnostics."
+          description="งานวิจัยที่กำลังดำเนินการ ด้านความหลากหลายทางชีวภาพและนวัตกรรมการศึกษา"
           link={{ href: "/research", label: "All projects" }}
           as="h2"
         />

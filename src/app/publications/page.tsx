@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Publications",
   description:
     `Peer-reviewed publications by ${profile.name} — journal articles, ` +
-    `conference papers, and preprints in computational biology and genomics.`,
+    `conference papers in biodiversity and science education.`,
   alternates: { canonical: "/publications" },
 };
 

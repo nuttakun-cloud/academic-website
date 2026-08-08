@@ -37,7 +37,7 @@ export default async function TeachingPage() {
         <PageHeader
           eyebrow="Teaching"
           title="Courses & Materials"
-          description="I teach across undergraduate and postgraduate levels, with an emphasis on computational thinking and hands-on data analysis."
+          description="รายวิชาที่รับผิดชอบในภาคเรียนปัจจุบัน สาขาวิชาชีววิทยา คณะวิทยาศาสตร์และเทคโนโลยี พร้อมสื่อประกอบการสอน"
         />
 
         {/* ── Office hours strip ── */}

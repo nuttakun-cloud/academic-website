@@ -53,8 +53,8 @@ export default async function ResearchPage() {
       <main id="main-content" className="flex-1">
         <PageHeader
           eyebrow="Research"
-          title="Our Work"
-          description="We develop computational and machine learning methods for genomics, with a focus on translating research into clinically meaningful tools."
+          title="งานวิจัย"
+          description="งานวิจัยด้านความหลากหลายทางชีวภาพของแมลงน้ำ และการพัฒนาสื่อการเรียนการสอนกับนวัตกรรมการศึกษาทางวิทยาศาสตร์"
         />
 
         {/* ── Active Projects ── */}

@@ -55,18 +55,20 @@ export default function Hero() {
                 View Research
               </Link>
 
-              <a
-                href={profile.cv}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md
-                  bg-white/10 text-white border border-white/20 font-medium font-sans text-sm
-                  hover:bg-white/20 transition-colors no-underline
-                  focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
-              >
-                <FileText size={16} aria-hidden="true" />
-                Download CV
-              </a>
+              {profile.cv && (
+                <a
+                  href={profile.cv}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md
+                    bg-white/10 text-white border border-white/20 font-medium font-sans text-sm
+                    hover:bg-white/20 transition-colors no-underline
+                    focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+                >
+                  <FileText size={16} aria-hidden="true" />
+                  Download CV
+                </a>
+              )}
             </div>
 
             {/* Social links */}

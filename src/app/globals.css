@@ -76,27 +76,31 @@ body {
    TYPOGRAPHY
    ───────────────────────────────────────────────────────────────────────────── */
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--text-primary);
-}
+/* อยู่ใน @layer base เพื่อให้ utility class (เช่น text-white) ชนะได้
+   — CSS นอก layer จะทับ utilities ของ Tailwind v4 เสมอ */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
 
-p {
-  line-height: 1.75;
-  color: var(--text-primary);
-}
+  p {
+    line-height: 1.75;
+    color: var(--text-primary);
+  }
 
-a {
-  color: var(--primary);
-  text-decoration-color: transparent;
-  text-underline-offset: 3px;
-  transition: color 120ms ease, text-decoration-color 120ms ease;
-}
+  a {
+    color: var(--primary);
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    transition: color 120ms ease, text-decoration-color 120ms ease;
+  }
 
-a:hover {
-  color: var(--primary-light);
-  text-decoration-color: currentColor;
+  a:hover {
+    color: var(--primary-light);
+    text-decoration-color: currentColor;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
