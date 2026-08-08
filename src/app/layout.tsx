@@ -46,11 +46,11 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 
   keywords: [
-    "computational biology",
-    "bioinformatics",
-    "genomics",
-    "machine learning",
-    "University of Edinburgh",
+    "ชีววิทยา",
+    "biodiversity",
+    "science education",
+    "teaching materials",
+    "มหาวิทยาลัยราชภัฏรำไพพรรณี",
     siteConfig.name,
   ],
 

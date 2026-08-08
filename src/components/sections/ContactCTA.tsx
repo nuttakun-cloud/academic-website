@@ -24,12 +24,12 @@ export default function ContactCTA() {
               id="contact-cta-heading"
               className="font-serif text-2xl md:text-3xl font-bold text-white mb-3"
             >
-              Open to collaboration and PhD enquiries
+              ติดต่อ · ปรึกษา · ร่วมงานวิจัย
             </h2>
             <p className="text-white/75 max-w-2xl leading-relaxed">
-              I welcome enquiries from prospective students, researchers, and
-              potential collaborators. Please review the contact guidance before
-              reaching out.
+              ยินดีรับการติดต่อจากนักศึกษา นักวิจัย
+              และผู้สนใจความร่วมมือทางวิชาการ
+              ดูช่องทางการติดต่อได้ที่หน้า Contact
             </p>
           </div>
 
